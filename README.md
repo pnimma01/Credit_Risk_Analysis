@@ -1,4 +1,4 @@
-** I worked with Aman Gill for this project, we follwed pair programming.
+** I worked with Aman Gill for this project, we followed pair programming.
 
 # Credit_Risk_Analysis
 
