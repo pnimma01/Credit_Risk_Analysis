@@ -27,9 +27,8 @@ The first model was trained with data sampled using the naive random overampling
 - Preciscion: The precision of this model is 0.01 for high risk and 1.00 for low risk applicants. This means that 100% of the predicted low risk applicants are - actually low risk, but only 1% of the predicted high risk applicants are actually high risk.
 - Recall: The recall of this model is 0.59 for high risk, and 0.67 for low risk applicants. This means that 59% of high risk applicants are classified as high risk and 67% of low risk applicants are classified as low risk.
 
-naive
 
-![NAIVE](https://github.com/pnimma01/Amazon_Vine_Analysis/blob/f1ac17ee13ae24c780c8a12772d0e3c5128058b2/Resources/D2/D2_Review_Counts.png)
+![NAIVE](https://github.com/pnimma01/Credit_Risk_Analysis/blob/d613ab3c6f74ace1ef49fc83d05be3bc5d737190/Resources/Naive_Random_Sampling.png)
 
 **SMOTE Oversampling**
 
@@ -39,8 +38,8 @@ The synthetic minority oversampling technique (SMOTE) is another oversampling ap
 -   Preciscion: SMOTE oversampling gives the same model preciscion score as the model trained with Naive ROS (1.00 and 0.01 for low and high risk). Both models inaccurately classify 90% of high risk applicants as low risk.
 -   Recall: The recall for this model is slightly worse than the recall from the model trained with Naive ROS. 62% of high risk applicants are categorized as high risk and 64% of low risk applicants are classified as low risk.
 
-smote
-![SMOTE](https://github.com/pnimma01/Amazon_Vine_Analysis/blob/f1ac17ee13ae24c780c8a12772d0e3c5128058b2/Resources/D2/D2_Review_Counts.png)
+
+![SMOTE](https://github.com/pnimma01/Credit_Risk_Analysis/blob/d613ab3c6f74ace1ef49fc83d05be3bc5d737190/Resources/SMOTE_OverSampling.png)
 
 **Cluster Centroids (Undersampling)**
 
@@ -52,9 +51,8 @@ Cluster centroid (undersampling) is smililar to SMOTE. The algorithm identifies 
 -   Preciscion: The precision scores for this model are the same as the first two models.
 -   Recall: THe recall scores for this model are also the lowest thus far. Only 56% of high risk applicants and 47% of low risk applicants are classified correctly. If this model were used to predict risk and approve/deny accordingly, this model would classify more than half of low risk applicants as high risk and nearly half of high risk applicants as low risk.
 
-undersampling
 
-![UnderSampling](https://github.com/pnimma01/Amazon_Vine_Analysis/blob/f1ac17ee13ae24c780c8a12772d0e3c5128058b2/Resources/D2/D2_Review_Counts.png)
+![UnderSampling](https://github.com/pnimma01/Credit_Risk_Analysis/blob/d613ab3c6f74ace1ef49fc83d05be3bc5d737190/Resources/Under_Sampling.png)
 
 **SMOTEENN (Combination Sampling)**
 
@@ -64,8 +62,8 @@ In the next model, SMOTEENN is applied, instead of SMOTE. As with SMOTE, the min
 -   Preciscion: The precision scores for this model are the same as the first three models.
 -   Recall: This model correctly classifies 70% of high risk applicants and 57% of low risk applicants. This model has the best sensitivity for detecting high risk applicants out of all four sampling models.
 
-smoteenn
-![SMOTTEENN](https://github.com/pnimma01/Amazon_Vine_Analysis/blob/f1ac17ee13ae24c780c8a12772d0e3c5128058b2/Resources/D2/D2_Review_Counts.png)
+
+![SMOTTEENN](https://github.com/pnimma01/Credit_Risk_Analysis/blob/d613ab3c6f74ace1ef49fc83d05be3bc5d737190/Resources/SMOTTEENN.png)
 
 **Balanced Random Forest Classifier**
 
@@ -75,8 +73,7 @@ We next tried two ensembles models, which improves overall model performance by 
 -   Preciscion: This model has the highest precision for classifying high risk applicants compared to models built from sampling techniques alone, but with a precision score of 0.04 this model still classifies 96% of high risk applicants as low risk. This model has the same preciscion score for classifying low risk applicants as the previous models (100%).
 -   Recall: This model correctly identifies 91% of low risk applicants as low risk, and 67% of high risk applicants as high risk. Though the recall score for high risk applicants is 3% lower than the recall score from the SMOTEENN model, the high recall score for low risk makes this ensemble model a better performer than models built from sampling techniques alone.
 
-balanced random forest
-![balanced random forest](https://github.com/pnimma01/Amazon_Vine_Analysis/blob/f1ac17ee13ae24c780c8a12772d0e3c5128058b2/Resources/D2/D2_Review_Counts.png)
+![balanced random forest](https://github.com/pnimma01/Credit_Risk_Analysis/blob/d613ab3c6f74ace1ef49fc83d05be3bc5d737190/Resources/Balanced_Random_Forest.png)
 
 **Easy Ensemble AdaBoost Classifier**
 
@@ -87,7 +84,7 @@ The final model that we generated for this analysis was built using an easy ense
 -   Recall: In this model, 91% of high risk and 94% of low risk applicants were correctly identified, which is the highest recall score of all the models.
 
 easy ensemble
-![easy ensemble](https://github.com/pnimma01/Amazon_Vine_Analysis/blob/f1ac17ee13ae24c780c8a12772d0e3c5128058b2/Resources/D2/D2_Review_Counts.png)
+![easy ensemble](https://github.com/pnimma01/Credit_Risk_Analysis/blob/d613ab3c6f74ace1ef49fc83d05be3bc5d737190/Resources/Easy_Ensemble_adaBooster.png)
 
 ## Summary
 
